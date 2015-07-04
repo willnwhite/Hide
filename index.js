@@ -13,11 +13,14 @@ exports.dummy = dummy;
 // Context menu item
 
 var contextMenu = require("sdk/context-menu");
-var menuItem = contextMenu.Item({
+var menuItem = contextMenu.Item(
+	{
 	label: "Hide this",
-	context: contextMenu.SelectionContext(),
-	contentScript: 	'self.on("click", function() {' +
-					'	var adverst = window.getSelection();' +
-					'	adverst.style.display="hidden";' +
-					'});',
-	});
+	context: contextMenu.SelectorContext("img"), 
+	contentScript: 'self.on("click", function (node) { node.style.visibility="hidden"; })', //  hides image on being clicked
+	}
+	);
+
+// Hide that adverst indefinitely	
+// Option to tell adverst owner you have hidden it indefinitely
+// Please donate to pay for: Chrome and Safari extension gallery fees
