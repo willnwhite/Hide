@@ -1,0 +1,13 @@
+{
+  "title": "Hide Adverse-tisements",
+  "name": "hide-adversetisements",
+  "version": "0.0.1",
+  "description": "Right-click to hide advertisements which affect you adversely.",
+  "main": "index.js",
+  "author": "Will White",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT"
+}
