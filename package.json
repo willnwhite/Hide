@@ -1,9 +1,9 @@
 {
-  "title": "Hide Adverse-tisements",
+  "title": "Hide Adversetisements",
   "name": "hide-adversetisements",
-  "version": "0.0.1",
-  "description": "Right-click to hide advertisements which affect you adversely.",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "Right-click to hide adverse, gratuitous advertisements. Version 2 will let you tell the advertiser you've hidden their advert.",
+  "main": "addon-script.js",
   "author": "Will White",
   "engines": {
     "firefox": ">=38.0a1",
