@@ -1,0 +1,16 @@
+<!-- <DOCTYPE HTML> -->
+<html>
+<script>
+addListener // Because the listeners themselves only exist in the context of the event page, you must use addListener each time the event page loads; only doing so at runtime.onInstalled by itself is insufficient. https://developer.chrome.com/extensions/event_pages#registration
+
+chrome.contextMenus.create({
+    "title": "Hide",
+    "contexts": ["page", "selection", "image", "link"],
+    "onclick" : clickHandler
+  });
+  
+function clickHandler() {
+	// hide selection
+	}
+</script>
+</html>

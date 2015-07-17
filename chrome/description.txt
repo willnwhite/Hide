@@ -1,0 +1,16 @@
+Right-click on the element then select Hide to hide it. Double-clicking or double-right-clicking would be more fun than right-clicking then selecting.
+content script OR event page to listen for right-click?
+(things that will cause the event page to load: The event page was listening for an event, and the event is dispatched.
+Make sure your event page closes as soon as the event that opened it is processed.
+If you're using message passing, be sure to close unused message ports. The event page will not shut down until all message ports are closed.
+If you're using the context menus API, pass a string id parameter to contextMenus.create, and use the contextMenus.onClicked callback instead of an onclick parameter to contextMenus.create.
+In order for the content script to pass the selected element to the event page, the event page may have to already be loaded. So it might be better to use a background page if this is the case.
+Remember to test that your event page works properly when it is unloaded and then reloaded, which only happens after several seconds of inactivity. Common mistakes include doing unnecessary work at page load time (when it should only be done when the extension is installed); setting an alarm at page load time (which resets any previous alarm); or not adding event listeners at page load time.) https://developer.chrome.com/extensions/event_pages
+
+content script OR event page to hide element by modifying the DOM OR injecting CSS?
+
+Hide it forever.
+Send the fact that you've hidden it to its publisher.
+
+manifest.JSON comments
+ // background page vs event page. make persistent true if unexpected behaviour

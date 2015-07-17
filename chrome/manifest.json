@@ -1,0 +1,22 @@
+{
+  "name": "Hides and Sends Back Offensive Advertising",
+  "description": "Right-click on adversetisements so they can't keep distracting you.",
+  "version": "0.6",
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["sample.js"],
+    "persistent": true
+  }, // https://developer.chrome.com/extensions/examples/api/contextMenus/basic/manifest.json
+  /* "icons": {
+    "16": "icon-bitty.png"
+  }, */
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "manifest_version": 2
+}
+
+// Let's clean up the Internet.
