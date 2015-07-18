@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<script>
+    function myCommandHandler(event) {
+        if (event.command === "no-more") {
+            console.log("Nice one!");
+            safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("hideElement"); // no need to pass event.userInfo as message's data here as "can be retrieved from the userInfo property of later events".
+            // Important: When dispatching a message to a page in Safari 6.1 and later, the message could be sent to pages not currently visible. The Safari application instance could also receive messages from multiple pages that target the same tab. For more information, read Tabs in Safari 6.1 and Later (page 89).
+        }
+    }
+
+    safari.application.addEventListener("command", myCommandHandler, false);
+
+</script>
+
+</html>
