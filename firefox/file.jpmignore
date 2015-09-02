@@ -4,3 +4,9 @@
 # Ignore any zip or xpi files
 *.zip
 *.xpi
+
+# Ignore other files
+README.md
+test
+test-addon-script.js
+file.jpmignore

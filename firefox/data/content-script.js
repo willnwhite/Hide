@@ -1,9 +1,7 @@
-// Hide Adverse-tisements
-
 // check for matches once storedImageSources received
 
 self.port.on("hideThese", function(storedImageSources) {
-	
+
 	var imgSrcs = [];
 	for (var i = 0; i < document.getElementsByTagName("img").length; i++) {
 		imgSrcs.push(document.getElementsByTagName("img")[i].src);
@@ -16,9 +14,4 @@ self.port.on("hideThese", function(storedImageSources) {
 		}
 });
 
-// When the user clicks your menu item, an event named "click" is emitted in the item's content script.
-
-/* self.on("click", function (node) {
-	node.style.visibility="hidden";
-	self.postMessage(node.src);
-	}); */
+// v1.1.1: stop this script being run in hidden.html
